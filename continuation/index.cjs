@@ -1,0 +1,27 @@
+// Execute the content locally; return only compact metadata, never card bodies.
+const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert');
+const root=path.resolve(__dirname,'..'),dist=root;
+const html=fs.readFileSync(path.join(dist,'index.html'),'utf8');
+const modules=[...html.matchAll(/<script src="([^"]+)"/g)].map(m=>m[1]).filter(n=>n!=='app.js');
+const source=modules.map(n=>fs.readFileSync(path.join(dist,n),'utf8')).join('\n');
+const ctx={};vm.createContext(ctx);vm.runInContext(source+'\nresult=concepts',ctx);const cards=ctx.result;
+const bookOf=c=>c.book||1;
+const tags=[...new Set(cards.flatMap(c=>c.tags))].sort();
+const books=[...new Set(cards.map(bookOf))].sort().map(book=>{const a=cards.filter(c=>bookOf(c)===book),chapters=[...new Set(a.map(c=>c.chapter))];return {book,cards:a.length,chapters,lastChapter:Math.max(...chapters.filter(c=>typeof c==='number')),lastSourcePage:Math.max(...a.flatMap(c=>{const m=c.source.match(/pp?\.\s*([\d,–\- ]+)/);return m?[...m[1].matchAll(/\d+/g)].map(x=>+x[0]):[]}))}});
+const labels={1:'Book 1',2:'Book 2',3:'Book 3A',4:'Book 3B'};
+const state={books:books.map(b=>({...b,label:labels[b.book],complete:true})),totalCards:cards.length,next:null,modules,tagCount:tags.length,tagsFile:'continuation/tags.txt',validator:'node continuation/index.cjs check'};
+function validate(){assert.equal(new Set(cards.map(c=>c.id)).size,cards.length,'Duplicate IDs');for(const c of cards){for(const k of ['id','chapter','title','intro','arabic','translation','body','takeaway','source'])assert(c[k],`${c.id}: missing ${k}`);assert(c.tags.length&&c.tags.every(t=>typeof t==='string'),c.id);assert(c.id.startsWith(`b${bookOf(c)===3?'3a':bookOf(c)===4?'3b':bookOf(c)}-c${c.chapter}-`),c.id)}
+const app=fs.readFileSync(path.join(dist,'app.js'),'utf8');let stored=JSON.stringify({current:'b1-c23-diptote',read:['b1-c1-n1'],saved:['b1-c5-1']});
+const elements=new Map;function el(k){if(!elements.has(k))elements.set(k,{textContent:'',innerHTML:'',style:{},classList:{toggle(){}},setAttribute(n,v){this[n]=v}});return elements.get(k)}
+const reader={document:{querySelector:el,querySelectorAll:()=>[],addEventListener(){}},localStorage:{getItem:()=>stored,setItem:(k,v)=>stored=v},setTimeout(){}};vm.createContext(reader);vm.runInContext(source+'\n'+app,reader);assert.equal(el('#progress-label').textContent,`1 / ${books.find(b=>b.book===1).cards}`);assert.equal(el('#saved-count').textContent,1);
+for(const book of books){vm.runInContext(`filter=null;openConcept(inBook(${book.book})[0].id)`,reader);for(let i=0;i<book.cards;i++)el('#next').onclick();assert.equal(el('#progress').value,book.cards);assert.equal(el('#progress').max,book.cards);assert.equal(el('#next').textContent,`End of Book ${book.book===3?'3A':book.book===4?'3B':book.book} ✓`);assert.equal(el('#next').disabled,true);assert.equal(el('#availability').textContent,`Book ${book.book===3?'3A':book.book===4?'3B':book.book} complete · ${book.cards} concepts`);vm.runInContext(`configured=books[${book.book}].chapters.map(c=>c.id)`,reader);assert.deepEqual(Array.from(reader.configured),book.chapters);}
+const reloaded={document:reader.document,localStorage:reader.localStorage,setTimeout(){}};vm.createContext(reloaded);vm.runInContext(source+'\n'+app,reloaded);assert.equal(el('#progress').value,books.at(-1).cards);assert.equal(el('#saved-count').textContent,1);el('#next').onclick();assert.equal(el('#next').textContent,`End of Book ${books.at(-1).book===3?'3A':books.at(-1).book===4?'3B':books.at(-1).book} ✓`);
+vm.runInContext(`switchBook(2); second=state.current; switchBook(4); third=state.current; state.saved.push(state.current); persist()`,reloaded);assert.equal(reloaded.third,cards.at(-1).id);assert(reloaded.second.startsWith('b2-'));const again={document:reader.document,localStorage:reader.localStorage,setTimeout(){}};vm.createContext(again);vm.runInContext(source+'\n'+app,again);assert.equal(el('#saved-count').textContent,2);vm.runInContext('switchBook(2);switchBook(4); restored=state.current',again);assert.equal(again.restored,reloaded.third);
+for(const tag of ['al','tanwin','idafah','numbers','verb']){vm.runInContext(`filter=${JSON.stringify(tag)};openConcept(concepts.find(c=>c.tags.includes(filter)).id);ordered=list().map(c=>bookOf(c))`,reader);const a=reader.ordered;for(let i=1;i<a.length;i++)assert(a[i]>=a[i-1]);}
+console.log(`PASS: ${cards.length} cards; unique IDs/schema; legacy progress/bookmarks; all book totals; full navigation; all completion states; chapter lists; cross-book bookmarks and remembered positions; reload; cross-book topic order.`)}
+const command=process.argv[2]||'summary';
+if(command==='check')validate();
+else if(command==='refresh'){fs.writeFileSync(path.join(__dirname,'state.json'),JSON.stringify(state,null,2)+'\n');fs.writeFileSync(path.join(__dirname,'tags.txt'),tags.join(', ')+'\n');console.log(JSON.stringify({books:books.map(({book,cards,lastChapter})=>({book,cards,lastChapter})),next:state.next,tags:tags.length}));}
+else if(command==='tags'){const q=(process.argv[3]||'').toLowerCase();console.log(tags.filter(t=>t.includes(q)).join(', '));}
+else if(command==='lookup'){const tag=process.argv[3];console.log(JSON.stringify(cards.filter(c=>c.tags.includes(tag)).map(c=>({book:bookOf(c),chapter:c.chapter,title:c.title,source:c.source}))));}
+else console.log(JSON.stringify({books:books.map(({book,cards,lastChapter})=>({book,cards,lastChapter})),next:state.next,tags:tags.length}));
