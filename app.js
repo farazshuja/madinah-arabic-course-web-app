@@ -9,6 +9,11 @@ const byId=id=>concepts.find(c=>c.id===id);
 const inBook=book=>concepts.filter(c=>bookOf(c)===book);
 let state={current:concepts[0].id,read:[],saved:[],positions:{}};
 try{const s=JSON.parse(localStorage.getItem('madinah.progress.v1'));if(s&&typeof s==='object'){if(byId(s.current))state.current=s.current;for(const key of ['read','saved'])state[key]=Array.isArray(s[key])?[...new Set(s[key].filter(id=>byId(id)))]:[];for(const book of Object.keys(books).map(Number)){const id=s.positions?.[book];if(byId(id)&&bookOf(byId(id))===book)state.positions[book]=id}}}catch{}
+// A shared card link takes precedence over the remembered reading position.
+if(typeof location!=='undefined'){
+const linkedId=new URLSearchParams(location.search).get('card');
+if(byId(linkedId))state.current=linkedId;
+}
 let activeBook=bookOf(byId(state.current)),filter=null,mode='learn';
 state.positions[activeBook]=state.current;
 function persist(){try{localStorage.setItem('madinah.progress.v1',JSON.stringify(state))}catch{toast('Browser storage is unavailable. Progress lasts for this visit.')}}

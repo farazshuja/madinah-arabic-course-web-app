@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Explore every Madinah Arabic Course takeaway by grammar topic, follow a learning path, and practise recalling the rules.">
+  <title>Madinah — Concept paths</title>
+  <link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+</head>
+<body>
+  <header><a class="brand" href="../index.html">Madinah <span>ARABIC, ONE IDEA AT A TIME</span></a><a class="reader-link" href="../index.html">Read by book ↗</a></header>
+  <main>
+    <section class="intro"><p class="eyebrow">CONNECTED KNOWLEDGE</p><h1>See how the ideas fit.</h1><p>Explore a grammar family. Follow its ideas from a first pattern to a deeper understanding. Then try recalling the rule.</p><p id="summary" class="muted" role="status">Loading concept paths…</p></section>
+    <nav class="views" aria-label="Learning view"><button data-view="tree" aria-pressed="true">Topic tree</button><button data-view="path" aria-pressed="false">Learning path</button><button data-view="review" aria-pressed="false">Recall practice</button><a href="concepts.json" download>Download grouped JSON ↗</a></nav>
+    <section class="filters" aria-label="Find concepts">
+      <label class="search-label">Find an idea<input id="search" type="search" placeholder="Search a rule, Arabic example, or topic…"></label>
+      <label>Topic<select id="topic"><option value="">All topics</option></select></label>
+      <label>Level<select id="level"><option value="">All levels</option></select></label>
+      <button id="clear" class="quiet">Clear filters</button>
+    </section>
+    <div class="view-description"><p id="view-help" class="muted"></p><button id="mix" class="quiet" hidden>Mix this review</button></div>
+    <p id="result-count" class="muted" aria-live="polite"></p>
+    <div class="workspace"><aside id="navigation" aria-label="Concept navigation"></aside><section id="detail" aria-label="Selected concept"></section></div>
+    <footer>Levels suggest a learning order; they do not measure your mastery. Original course examples and source links remain attached.<br>Recall practice keeps no scores. Revisit ideas after a gap, and compare your answer with the explanation.<br><a href="coverage.json">Coverage & grouping decisions</a> · <a href="../key-takeaways.json">Original takeaway export</a></footer>
+  </main>
+</body></html>

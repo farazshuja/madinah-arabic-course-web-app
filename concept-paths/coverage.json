@@ -1,0 +1,554 @@
+{
+  "statistics": {
+    "sourceCards": 743,
+    "concepts": 733,
+    "topics": 11,
+    "subtopics": 69,
+    "combinedConcepts": 9
+  },
+  "coverageByBook": [
+    {
+      "book": "Book 1",
+      "cards": 143
+    },
+    {
+      "book": "Book 2",
+      "cards": 264
+    },
+    {
+      "book": "Book 3A",
+      "cards": 124
+    },
+    {
+      "book": "Book 3B",
+      "cards": 212
+    }
+  ],
+  "topics": [
+    {
+      "id": "foundations",
+      "title": "Sounds, writing & word classes",
+      "concepts": 21,
+      "branches": [
+        {
+          "id": "word-classes",
+          "title": "Word classes",
+          "concepts": 1
+        },
+        {
+          "id": "sounds",
+          "title": "Pronunciation & connected speech",
+          "concepts": 8
+        },
+        {
+          "id": "writing",
+          "title": "Spelling & letters",
+          "concepts": 12
+        }
+      ]
+    },
+    {
+      "id": "nouns",
+      "title": "Nouns & their properties",
+      "concepts": 95,
+      "branches": [
+        {
+          "id": "definiteness",
+          "title": "Definite & indefinite",
+          "concepts": 9
+        },
+        {
+          "id": "gender",
+          "title": "Grammatical gender",
+          "concepts": 3
+        },
+        {
+          "id": "dual-nouns",
+          "title": "Dual nouns & “both”",
+          "concepts": 7
+        },
+        {
+          "id": "plurals",
+          "title": "Plural formation",
+          "concepts": 30
+        },
+        {
+          "id": "diptotes",
+          "title": "Diptotes & tanwin restrictions",
+          "concepts": 25
+        },
+        {
+          "id": "latent-endings",
+          "title": "Hidden & fixed noun endings",
+          "concepts": 10
+        },
+        {
+          "id": "five-nouns",
+          "title": "The five nouns",
+          "concepts": 11
+        }
+      ]
+    },
+    {
+      "id": "pronouns",
+      "title": "Pronouns & pointing words",
+      "concepts": 61,
+      "branches": [
+        {
+          "id": "personal-pronouns",
+          "title": "Personal pronouns",
+          "concepts": 13
+        },
+        {
+          "id": "attached-pronouns",
+          "title": "Possessive & object suffixes",
+          "concepts": 25
+        },
+        {
+          "id": "subject-pronouns",
+          "title": "Attached & hidden subjects",
+          "concepts": 5
+        },
+        {
+          "id": "demonstratives",
+          "title": "Pointing words",
+          "concepts": 12
+        },
+        {
+          "id": "relatives",
+          "title": "Relative pronouns & clauses",
+          "concepts": 6
+        }
+      ]
+    },
+    {
+      "id": "phrases",
+      "title": "Description & possession",
+      "concepts": 40,
+      "branches": [
+        {
+          "id": "description",
+          "title": "Adjectives & agreement",
+          "concepts": 20
+        },
+        {
+          "id": "possession",
+          "title": "Possession & idafah",
+          "concepts": 13
+        },
+        {
+          "id": "comparison",
+          "title": "Comparison & superlatives",
+          "concepts": 7
+        }
+      ]
+    },
+    {
+      "id": "sentences",
+      "title": "Sentences & grammatical roles",
+      "concepts": 83,
+      "branches": [
+        {
+          "id": "nominal",
+          "title": "Topics & predicates",
+          "concepts": 16
+        },
+        {
+          "id": "verbal",
+          "title": "Verbal sentences & subjects",
+          "concepts": 5
+        },
+        {
+          "id": "case",
+          "title": "Case & sentence roles",
+          "concepts": 8
+        },
+        {
+          "id": "objects",
+          "title": "Direct & multiple objects",
+          "concepts": 8
+        },
+        {
+          "id": "adverbials",
+          "title": "Time & place expressions",
+          "concepts": 21
+        },
+        {
+          "id": "hal",
+          "title": "State during an action · hal",
+          "concepts": 8
+        },
+        {
+          "id": "absolute-object",
+          "title": "Action emphasis · absolute object",
+          "concepts": 10
+        },
+        {
+          "id": "reason-object",
+          "title": "Reason & accompaniment objects",
+          "concepts": 1
+        },
+        {
+          "id": "badal",
+          "title": "Renaming & substitution · badal",
+          "concepts": 5
+        },
+        {
+          "id": "specification",
+          "title": "Specification after a pronoun",
+          "concepts": 1
+        }
+      ]
+    },
+    {
+      "id": "verbs",
+      "title": "Verbs & their endings",
+      "concepts": 77,
+      "branches": [
+        {
+          "id": "past",
+          "title": "Past actions",
+          "concepts": 18
+        },
+        {
+          "id": "present",
+          "title": "Present & future actions",
+          "concepts": 16
+        },
+        {
+          "id": "commands",
+          "title": "Commands & prohibitions",
+          "concepts": 21
+        },
+        {
+          "id": "moods",
+          "title": "Verb moods & the five forms",
+          "concepts": 12
+        },
+        {
+          "id": "passive",
+          "title": "Passive constructions",
+          "concepts": 5
+        },
+        {
+          "id": "transitivity",
+          "title": "Transitive & intransitive verbs",
+          "concepts": 5
+        }
+      ]
+    },
+    {
+      "id": "morphology",
+      "title": "Roots & word formation",
+      "concepts": 119,
+      "branches": [
+        {
+          "id": "roots",
+          "title": "Roots & basic verb groups",
+          "concepts": 10
+        },
+        {
+          "id": "weak",
+          "title": "Weak & doubled verbs",
+          "concepts": 29
+        },
+        {
+          "id": "form-ii",
+          "title": "Form II",
+          "concepts": 8
+        },
+        {
+          "id": "form-iii",
+          "title": "Form III",
+          "concepts": 4
+        },
+        {
+          "id": "form-iv",
+          "title": "Form IV",
+          "concepts": 5
+        },
+        {
+          "id": "form-v",
+          "title": "Form V",
+          "concepts": 4
+        },
+        {
+          "id": "form-vi",
+          "title": "Form VI",
+          "concepts": 4
+        },
+        {
+          "id": "form-vii",
+          "title": "Form VII",
+          "concepts": 4
+        },
+        {
+          "id": "form-viii",
+          "title": "Form VIII",
+          "concepts": 6
+        },
+        {
+          "id": "form-ix",
+          "title": "Form IX",
+          "concepts": 2
+        },
+        {
+          "id": "form-x",
+          "title": "Form X",
+          "concepts": 4
+        },
+        {
+          "id": "quadriliteral",
+          "title": "Four-radical verbs",
+          "concepts": 4
+        },
+        {
+          "id": "masdar",
+          "title": "Verbal nouns · masdar",
+          "concepts": 15
+        },
+        {
+          "id": "participles",
+          "title": "Active & passive participles",
+          "concepts": 9
+        },
+        {
+          "id": "derived-nouns",
+          "title": "Place, time & instrument nouns",
+          "concepts": 7
+        },
+        {
+          "id": "noun-patterns",
+          "title": "Nisbah & diminutives",
+          "concepts": 4
+        }
+      ]
+    },
+    {
+      "id": "particles",
+      "title": "Particles & sentence changes",
+      "concepts": 107,
+      "branches": [
+        {
+          "id": "prepositions",
+          "title": "Prepositions & their complements",
+          "concepts": 9
+        },
+        {
+          "id": "questions",
+          "title": "Questions & answers",
+          "concepts": 12
+        },
+        {
+          "id": "negation",
+          "title": "Negation across time",
+          "concepts": 27
+        },
+        {
+          "id": "inna",
+          "title": "Inna & related particles",
+          "concepts": 15
+        },
+        {
+          "id": "kana",
+          "title": "Kana & related verbs",
+          "concepts": 14
+        },
+        {
+          "id": "emphasis",
+          "title": "Emphasis, oaths & restriction",
+          "concepts": 22
+        },
+        {
+          "id": "vocative",
+          "title": "Calling & addressing",
+          "concepts": 8
+        }
+      ]
+    },
+    {
+      "id": "clauses",
+      "title": "Connecting ideas",
+      "concepts": 51,
+      "branches": [
+        {
+          "id": "conjunctions",
+          "title": "Joining, contrasting & correcting",
+          "concepts": 10
+        },
+        {
+          "id": "purpose",
+          "title": "Reasons, purposes & results",
+          "concepts": 9
+        },
+        {
+          "id": "conditions",
+          "title": "Conditions & their answers",
+          "concepts": 16
+        },
+        {
+          "id": "noun-clauses",
+          "title": "Clauses that act as nouns",
+          "concepts": 8
+        },
+        {
+          "id": "exceptions",
+          "title": "Exceptions & exclusion",
+          "concepts": 8
+        }
+      ]
+    },
+    {
+      "id": "numbers",
+      "title": "Numbers & quantities",
+      "concepts": 49,
+      "branches": [
+        {
+          "id": "counting",
+          "title": "Counting & counted nouns",
+          "concepts": 42
+        },
+        {
+          "id": "ordinals",
+          "title": "Order & fractions",
+          "concepts": 2
+        },
+        {
+          "id": "quantity",
+          "title": "Quantity & tamyiz",
+          "concepts": 5
+        }
+      ]
+    },
+    {
+      "id": "expressions",
+      "title": "Expressions & usage",
+      "concepts": 30,
+      "branches": [
+        {
+          "id": "everyday",
+          "title": "Useful expressions & meanings",
+          "concepts": 17
+        },
+        {
+          "id": "exclamation",
+          "title": "Wonder, warning & urging",
+          "concepts": 6
+        },
+        {
+          "id": "verb-nouns",
+          "title": "Expressions with a verb’s force",
+          "concepts": 5
+        },
+        {
+          "id": "text-usage",
+          "title": "Poetry & contextual usage",
+          "concepts": 2
+        }
+      ]
+    }
+  ],
+  "combinations": [
+    {
+      "id": "adjective-definiteness",
+      "treatment": "merged-rule",
+      "sourceIds": [
+        "b1-c9-a1b",
+        "b2-c31-a"
+      ],
+      "reason": "The later review restates word order and definiteness together. Keep the adjective/predicate contrast separate."
+    },
+    {
+      "id": "adjective-case",
+      "treatment": "merged-rule",
+      "sourceIds": [
+        "b1-c9-a1c",
+        "b1-c14-6b",
+        "b2-c31-b",
+        "b3a-c1-a-dependent-naat"
+      ],
+      "reason": "The same adjective-case rule appears in four cards. Examples for ordinary phrases and for choosing between an idafah’s two nouns are preserved."
+    },
+    {
+      "id": "nonhuman-plural-agreement",
+      "treatment": "combined-sequence",
+      "sourceIds": [
+        "b1-c16-1a",
+        "b1-c16-1b"
+      ],
+      "reason": "Two complementary steps—recognize the class, then apply its agreement. Assumes basic singular/plural recognition; exceptions remain in later source cards."
+    },
+    {
+      "id": "b1-c4-n2",
+      "treatment": "merged-rule",
+      "sourceIds": [
+        "b1-c4-n2",
+        "b1-c22-1"
+      ],
+      "reason": "Combined introduction and review of the same examples. Detailed exceptions remain in the later diptote concepts."
+    },
+    {
+      "id": "b1-c9-a2",
+      "treatment": "merged-rule",
+      "sourceIds": [
+        "b1-c9-a2",
+        "b1-c22-4"
+      ],
+      "reason": "The later chapter repeats the same illustrated adjective pattern. Its source and examples remain attached."
+    },
+    {
+      "id": "b1-c10-6",
+      "treatment": "merged-rule",
+      "sourceIds": [
+        "b1-c10-6",
+        "b1-c22-2"
+      ],
+      "reason": "Combined the introduction and its review. A name’s gender and ending class must both be learned."
+    },
+    {
+      "id": "b1-c15-4",
+      "treatment": "combined-sequence",
+      "sourceIds": [
+        "b1-c15-4",
+        "b1-c12-v"
+      ],
+      "reason": "Grouped the short “after” vocabulary note with its fuller before/after explanation. Fixed endings after an omitted complement are a separate refinement."
+    },
+    {
+      "id": "b2-c10-4",
+      "treatment": "merged-rule",
+      "sourceIds": [
+        "b2-c10-4",
+        "b3a-c2-2"
+      ],
+      "reason": "Both cards explain the same contrast. The introductory particle-government lesson remains separate."
+    },
+    {
+      "id": "b2-c29-2",
+      "treatment": "merged-rule",
+      "sourceIds": [
+        "b2-c29-2",
+        "b3b-c20-2"
+      ],
+      "reason": "Combined repeated explanations of the same temporal/negative distinction; kept both sets of examples."
+    }
+  ],
+  "qualificationsKeptSeparate": [
+    [
+      "b2-c2-3",
+      "b3b-c17-8"
+    ],
+    [
+      "b2-c25-4",
+      "b3a-c12-3"
+    ],
+    [
+      "b2-c15-5",
+      "b3b-c18-6"
+    ],
+    [
+      "b1-c23-diptote",
+      "b3b-c34-1k"
+    ]
+  ]
+}

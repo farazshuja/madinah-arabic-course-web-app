@@ -1,0 +1,816 @@
+{
+  "schemaVersion": 1,
+  "title": "Definiteness, description & possession",
+  "status": "pilot",
+  "scope": "Selected existing cards from Books 1 and 3A; not exhaustive topic coverage.",
+  "externalPrerequisites": [
+    "Recognize basic masculine/feminine and singular/plural distinctions.",
+    "Recognize simple nominal sentences and common prepositions; source cards provide supporting context."
+  ],
+  "difficultyScale": {
+    "1": "Recognize a simple pattern",
+    "2": "Build and distinguish phrases",
+    "3": "Apply interacting rules and qualifications"
+  },
+  "topics": [
+    {
+      "id": "definiteness",
+      "title": "Which thing do we mean?",
+      "subtitle": "Definiteness · مَعْرِفَة / نَكِرَة"
+    },
+    {
+      "id": "description",
+      "title": "How do we describe it?",
+      "subtitle": "Description & agreement · نَعْت"
+    },
+    {
+      "id": "possession",
+      "title": "How are the nouns connected?",
+      "subtitle": "Possession & idafah · إِضَافَة"
+    }
+  ],
+  "learningPath": [
+    "indefinite-noun",
+    "definite-with-al",
+    "noun-adjective-order",
+    "idafah-order",
+    "adjective-gender",
+    "adjective-definiteness",
+    "phrase-versus-statement",
+    "tanwin-not-english-a",
+    "proper-name-definite",
+    "mudaf-no-al-tanwin",
+    "owner-majrur",
+    "attached-owners",
+    "my-book",
+    "adjective-case",
+    "idafah-definiteness",
+    "describe-possessed-noun",
+    "idafah-after-preposition",
+    "nonhuman-plural-agreement",
+    "definite-categories"
+  ],
+  "concepts": [
+    {
+      "id": "indefinite-noun",
+      "primaryTopic": "definiteness",
+      "difficulty": 1,
+      "title": "Recognize an indefinite noun",
+      "rule": "For ordinary nouns such as كِتَابٌ, tanwin accompanies an indefinite meaning: “a book.”",
+      "prerequisites": [],
+      "relatedTopics": [],
+      "treatment": "retained",
+      "note": "An introductory pattern, not a definition of every word with tanwin.",
+      "sourceCards": [
+        {
+          "id": "b1-c1-n3",
+          "book": "Book 1",
+          "chapter": 1,
+          "title": "Where is the word “a”?",
+          "source": "Note 3 · p. 3",
+          "takeaway": "For these nouns, the ending helps express “a” or “an.”",
+          "cardUrl": "https://farazshuja.github.io/madinah-arabic-course-web-app/?card=b1-c1-n3"
+        }
+      ],
+      "examples": [
+        {
+          "sourceCardId": "b1-c1-n3",
+          "arabic": "كِتَابٌ   ·   بَيْتٌ   ·   مَسْجِدٌ",
+          "translation": "A book · a house · a mosque"
+        }
+      ],
+      "reviewPrompts": [
+        {
+          "prompt": "What does كِتَابٌ mean in this example?",
+          "answer": "A book."
+        }
+      ]
+    },
+    {
+      "id": "definite-with-al",
+      "primaryTopic": "definiteness",
+      "difficulty": 1,
+      "title": "Make a noun definite with الـ",
+      "rule": "Add الـ and remove tanwin: بَيْتٌ becomes الْبَيْتُ.",
+      "prerequisites": [
+        "indefinite-noun"
+      ],
+      "relatedTopics": [],
+      "treatment": "retained",
+      "note": "The example is nominative; الـ does not determine the noun’s case.",
+      "sourceCards": [
+        {
+          "id": "b1-c3-a",
+          "book": "Book 1",
+          "chapter": 3,
+          "title": "Make “a house” into “the house”",
+          "source": "Opening explanation · p. 6",
+          "takeaway": "Add الـ and remove tanwin: a noun becomes definite.",
+          "cardUrl": "https://farazshuja.github.io/madinah-arabic-course-web-app/?card=b1-c3-a"
+        }
+      ],
+      "examples": [
+        {
+          "sourceCardId": "b1-c3-a",
+          "arabic": "بَيْتٌ ← الْبَيْتُ",
+          "translation": "A house → the house"
+        }
+      ],
+      "reviewPrompts": [
+        {
+          "prompt": "Change بَيْتٌ (“a house”) to “the house.”",
+          "answer": "الْبَيْتُ. Add الـ and replace tanwin with the appropriate single case vowel."
+        }
+      ]
+    },
+    {
+      "id": "noun-adjective-order",
+      "primaryTopic": "description",
+      "difficulty": 1,
+      "title": "Put the adjective after its noun",
+      "rule": "In a describing phrase, place the noun before its adjective: بَيْتٌ جَدِيدٌ, “a new house.”",
+      "prerequisites": [
+        "indefinite-noun"
+      ],
+      "relatedTopics": [],
+      "treatment": "retained",
+      "note": "This is a phrase; a predicate makes a statement.",
+      "sourceCards": [
+        {
+          "id": "b1-c9-a1",
+          "book": "Book 1",
+          "chapter": 9,
+          "title": "Put the describing word after the noun",
+          "source": "Part A · Point 1 · p. 20",
+          "takeaway": "For “a new house,” say “a house, new”: بَيْتٌ جَدِيدٌ.",
+          "cardUrl": "https://farazshuja.github.io/madinah-arabic-course-web-app/?card=b1-c9-a1"
+        }
+      ],
+      "examples": [
+        {
+          "sourceCardId": "b1-c9-a1",
+          "arabic": "بَيْتٌ جَدِيدٌ",
+          "translation": "A new house"
+        }
+      ],
+      "reviewPrompts": [
+        {
+          "prompt": "Say “a new house” using بَيْتٌ and جَدِيدٌ.",
+          "answer": "بَيْتٌ جَدِيدٌ."
+        }
+      ]
+    },
+    {
+      "id": "adjective-gender",
+      "primaryTopic": "description",
+      "difficulty": 2,
+      "title": "Match the noun’s grammatical gender",
+      "rule": "A describing adjective agrees with its noun in grammatical gender, even when the noun has no ة.",
+      "prerequisites": [
+        "noun-adjective-order"
+      ],
+      "relatedTopics": [],
+      "treatment": "retained",
+      "note": "Assumes basic recognition of masculine and feminine nouns.",
+      "sourceCards": [
+        {
+          "id": "b1-c9-a1a",
+          "book": "Book 1",
+          "chapter": 9,
+          "title": "Match the adjective to the noun’s gender",
+          "source": "Part A · Point 1A · p. 20",
+          "takeaway": "Match grammatical gender, rather than just copying the noun’s last letter.",
+          "cardUrl": "https://farazshuja.github.io/madinah-arabic-course-web-app/?card=b1-c9-a1a"
+        }
+      ],
+      "examples": [
+        {
+          "sourceCardId": "b1-c9-a1a",
+          "arabic": "وَلَدٌ صَغِيرٌ   ·   بِنْتٌ صَغِيرَةٌ\nكِتَابٌ جَدِيدٌ   ·   سَيَّارَةٌ جَدِيدَةٌ",
+          "translation": "A small boy · a small girl\nA new book · a new car"
+        }
+      ],
+      "reviewPrompts": [
+        {
+          "prompt": "Choose: بِنْتٌ صَغِيرٌ or بِنْتٌ صَغِيرَةٌ?",
+          "answer": "بِنْتٌ صَغِيرَةٌ. بِنْتٌ is feminine although it has no ة."
+        }
+      ]
+    },
+    {
+      "id": "adjective-definiteness",
+      "primaryTopic": "description",
+      "difficulty": 2,
+      "title": "Match definiteness in a describing phrase",
+      "rule": "For an ordinary noun made definite with الـ, its describing adjective takes الـ too.",
+      "prerequisites": [
+        "definite-with-al",
+        "noun-adjective-order"
+      ],
+      "relatedTopics": [],
+      "treatment": "retained",
+      "note": "Nouns can also be definite without الـ; possessed nouns appear later in the path.",
+      "sourceCards": [
+        {
+          "id": "b1-c9-a1b",
+          "book": "Book 1",
+          "chapter": 9,
+          "title": "Match “the” on the adjective too",
+          "source": "Part A · Point 1B · p. 20",
+          "takeaway": "For “the new teacher,” both the noun and its describing adjective take الـ.",
+          "cardUrl": "https://farazshuja.github.io/madinah-arabic-course-web-app/?card=b1-c9-a1b"
+        }
+      ],
+      "examples": [
+        {
+          "sourceCardId": "b1-c9-a1b",
+          "arabic": "بِلَالٌ مُدَرِّسٌ جَدِيدٌ\nالْمُدَرِّسُ الْجَدِيدُ فِي الْفَصْلِ",
+          "translation": "Bilal is a new teacher.\nThe new teacher is in the classroom."
+        }
+      ],
+      "reviewPrompts": [
+        {
+          "prompt": "Say “the new teacher.”",
+          "answer": "الْمُدَرِّسُ الْجَدِيدُ."
+        }
+      ]
+    },
+    {
+      "id": "phrase-versus-statement",
+      "primaryTopic": "description",
+      "difficulty": 2,
+      "title": "Distinguish a description from a statement",
+      "rule": "الْمُدَرِّسُ الْجَدِيدُ means “the new teacher”; الْمُدَرِّسُ جَدِيدٌ means “the teacher is new.”",
+      "prerequisites": [
+        "adjective-definiteness"
+      ],
+      "relatedTopics": [],
+      "treatment": "comparison",
+      "note": "A comparison assembled from two cards, not a claim that the cards are duplicates. These examples do not make every predicate indefinite.",
+      "sourceCards": [
+        {
+          "id": "b1-c9-a1b",
+          "book": "Book 1",
+          "chapter": 9,
+          "title": "Match “the” on the adjective too",
+          "source": "Part A · Point 1B · p. 20",
+          "takeaway": "For “the new teacher,” both the noun and its describing adjective take الـ.",
+          "cardUrl": "https://farazshuja.github.io/madinah-arabic-course-web-app/?card=b1-c9-a1b"
+        },
+        {
+          "id": "b1-c3-e",
+          "book": "Book 1",
+          "chapter": 3,
+          "title": "Tanwin does not always mean “a”",
+          "source": "Note · p. 7",
+          "takeaway": "On these describing words, tanwin does not add an English “a.”",
+          "cardUrl": "https://farazshuja.github.io/madinah-arabic-course-web-app/?card=b1-c3-e"
+        }
+      ],
+      "examples": [
+        {
+          "sourceCardId": "b1-c9-a1b",
+          "arabic": "بِلَالٌ مُدَرِّسٌ جَدِيدٌ\nالْمُدَرِّسُ الْجَدِيدُ فِي الْفَصْلِ",
+          "translation": "Bilal is a new teacher.\nThe new teacher is in the classroom."
+        },
+        {
+          "sourceCardId": "b1-c3-e",
+          "arabic": "الْبَابُ مَفْتُوحٌ\nالْقَلَمُ مَكْسُورٌ",
+          "translation": "The door is open.\nThe pen is broken."
+        }
+      ],
+      "reviewPrompts": [
+        {
+          "prompt": "Which is a statement: الْمُدَرِّسُ الْجَدِيدُ or الْمُدَرِّسُ جَدِيدٌ?",
+          "answer": "الْمُدَرِّسُ جَدِيدٌ: “The teacher is new.” The indefinite word is the predicate here."
+        }
+      ]
+    },
+    {
+      "id": "tanwin-not-english-a",
+      "primaryTopic": "definiteness",
+      "difficulty": 2,
+      "title": "Do not translate every tanwin as “a”",
+      "rule": "Tanwin is an ending, not an English word: مَفْتُوحٌ in this predicate means “open,” not “a open.”",
+      "prerequisites": [
+        "indefinite-noun",
+        "phrase-versus-statement"
+      ],
+      "relatedTopics": [],
+      "treatment": "qualification",
+      "note": "Retained as a qualification of the introductory tanwin pattern.",
+      "sourceCards": [
+        {
+          "id": "b1-c3-e",
+          "book": "Book 1",
+          "chapter": 3,
+          "title": "Tanwin does not always mean “a”",
+          "source": "Note · p. 7",
+          "takeaway": "On these describing words, tanwin does not add an English “a.”",
+          "cardUrl": "https://farazshuja.github.io/madinah-arabic-course-web-app/?card=b1-c3-e"
+        }
+      ],
+      "examples": [
+        {
+          "sourceCardId": "b1-c3-e",
+          "arabic": "الْبَابُ مَفْتُوحٌ\nالْقَلَمُ مَكْسُورٌ",
+          "translation": "The door is open.\nThe pen is broken."
+        }
+      ],
+      "reviewPrompts": [
+        {
+          "prompt": "Translate الْبَابُ مَفْتُوحٌ.",
+          "answer": "The door is open."
+        }
+      ]
+    },
+    {
+      "id": "proper-name-definite",
+      "primaryTopic": "definiteness",
+      "difficulty": 2,
+      "title": "A name can be definite and have tanwin",
+      "rule": "A proper name such as حَامِدٌ identifies a person and is definite even though it has tanwin.",
+      "prerequisites": [
+        "tanwin-not-english-a"
+      ],
+      "relatedTopics": [],
+      "treatment": "qualification",
+      "note": "Separate from predicate translation: this addresses definiteness itself.",
+      "sourceCards": [
+        {
+          "id": "b1-c4-n1",
+          "book": "Book 1",
+          "chapter": 4,
+          "title": "A name can have tanwin too",
+          "source": "Note 1 · p. 9",
+          "takeaway": "Translate the name itself; do not add “a” because of tanwin.",
+          "cardUrl": "https://farazshuja.github.io/madinah-arabic-course-web-app/?card=b1-c4-n1"
+        }
+      ],
+      "examples": [
+        {
+          "sourceCardId": "b1-c4-n1",
+          "arabic": "حَامِدٌ",
+          "translation": "Hamid"
+        }
+      ],
+      "reviewPrompts": [
+        {
+          "prompt": "Does حَامِدٌ mean “a Hamid” because it has tanwin?",
+          "answer": "No. It is the name Hamid; a proper name is definite."
+        }
+      ]
+    },
+    {
+      "id": "idafah-order",
+      "primaryTopic": "possession",
+      "difficulty": 1,
+      "title": "Put the thing before its owner",
+      "rule": "In an ordinary possessive idafah, put the thing first and the owner second: كِتَابُ بِلَالٍ.",
+      "prerequisites": [
+        "indefinite-noun"
+      ],
+      "relatedTopics": [],
+      "treatment": "retained",
+      "note": "Mudaf = first noun; mudaf ilayhi = complement. Idafah can express relationships beyond ownership.",
+      "sourceCards": [
+        {
+          "id": "b1-c5-1",
+          "book": "Book 1",
+          "chapter": 5,
+          "title": "Put the thing before its owner",
+          "source": "Point 1 · p. 12",
+          "takeaway": "Thing first, owner second: “book of Bilal.”",
+          "cardUrl": "https://farazshuja.github.io/madinah-arabic-course-web-app/?card=b1-c5-1"
+        }
+      ],
+      "examples": [
+        {
+          "sourceCardId": "b1-c5-1",
+          "arabic": "كِتَابُ بِلَالٍ\nبَيْتُ الْإِمَامِ",
+          "translation": "Bilal’s book\nThe imam’s house"
+        }
+      ],
+      "reviewPrompts": [
+        {
+          "prompt": "Say “Bilal’s book” using كِتَاب and بِلَال.",
+          "answer": "كِتَابُ بِلَالٍ: thing first, owner second."
+        }
+      ]
+    },
+    {
+      "id": "mudaf-no-al-tanwin",
+      "primaryTopic": "possession",
+      "difficulty": 2,
+      "title": "Leave الـ and tanwin off the first noun",
+      "rule": "In the ordinary possessive idafah taught here, the first noun has neither الـ nor tanwin.",
+      "prerequisites": [
+        "definite-with-al",
+        "idafah-order"
+      ],
+      "relatedTopics": [],
+      "treatment": "retained",
+      "note": "Missing tanwin alone does not prove that the phrase is definite.",
+      "sourceCards": [
+        {
+          "id": "b1-c5-1a",
+          "book": "Book 1",
+          "chapter": 5,
+          "title": "The first word loses الـ and tanwin",
+          "source": "Point 1 · Note a · p. 12",
+          "takeaway": "In كِتَابُ بِلَالٍ, leave both الـ and tanwin off كِتَابُ.",
+          "cardUrl": "https://farazshuja.github.io/madinah-arabic-course-web-app/?card=b1-c5-1a"
+        }
+      ],
+      "examples": [
+        {
+          "sourceCardId": "b1-c5-1a",
+          "arabic": "كِتَابُ بِلَالٍ",
+          "translation": "Bilal’s book"
+        }
+      ],
+      "reviewPrompts": [
+        {
+          "prompt": "Correct كِتَابٌ بِلَالٍ to mean “Bilal’s book.”",
+          "answer": "كِتَابُ بِلَالٍ. Remove tanwin from the first noun."
+        }
+      ]
+    },
+    {
+      "id": "owner-majrur",
+      "primaryTopic": "possession",
+      "difficulty": 2,
+      "title": "Give the complement its majrur role",
+      "rule": "The second part of an idafah is majrur. Ordinary declinable nouns show kasrah, with or without tanwin.",
+      "prerequisites": [
+        "idafah-order"
+      ],
+      "relatedTopics": [],
+      "treatment": "retained",
+      "note": "Case is a grammatical role; not every word shows it with kasrah.",
+      "sourceCards": [
+        {
+          "id": "b1-c5-1b",
+          "book": "Book 1",
+          "chapter": 5,
+          "title": "The owner takes a majrur ending",
+          "source": "Point 1 · Note b · p. 12",
+          "takeaway": "Look for “i” or “in” on the owner in these examples.",
+          "cardUrl": "https://farazshuja.github.io/madinah-arabic-course-web-app/?card=b1-c5-1b"
+        }
+      ],
+      "examples": [
+        {
+          "sourceCardId": "b1-c5-1b",
+          "arabic": "بَيْتُ بِلَالٍ\nبَيْتُ الْإِمَامِ",
+          "translation": "Bilal’s house\nThe imam’s house"
+        }
+      ],
+      "reviewPrompts": [
+        {
+          "prompt": "Why is بِلَالٍ majrur in كِتَابُ بِلَالٍ?",
+          "answer": "It is the mudaf ilayhi, the second part of the idafah."
+        }
+      ]
+    },
+    {
+      "id": "adjective-case",
+      "primaryTopic": "description",
+      "difficulty": 3,
+      "title": "Match the adjective’s case to its noun",
+      "rule": "A describing adjective takes the case of the noun it describes. In longer phrases, use this to identify which noun is described.",
+      "prerequisites": [
+        "adjective-definiteness",
+        "owner-majrur"
+      ],
+      "relatedTopics": [
+        "possession"
+      ],
+      "treatment": "merged-rule",
+      "note": "One shared case-agreement rule. The later card is retained as an advanced application, with its own example. Basic preposition knowledge helps with the first example.",
+      "sourceCards": [
+        {
+          "id": "b1-c9-a1c",
+          "book": "Book 1",
+          "chapter": 9,
+          "title": "The adjective follows the noun’s case",
+          "source": "Part A · Point 1C · pp. 20–21",
+          "takeaway": "When the noun becomes majrur, its describing adjective becomes majrur too.",
+          "cardUrl": "https://farazshuja.github.io/madinah-arabic-course-web-app/?card=b1-c9-a1c"
+        },
+        {
+          "id": "b1-c14-6b",
+          "book": "Book 1",
+          "chapter": 14,
+          "title": "The ending tells you what is new",
+          "source": "Point 6 · Comparison · p. 38",
+          "takeaway": "Match the adjective’s case to the noun it describes.",
+          "cardUrl": "https://farazshuja.github.io/madinah-arabic-course-web-app/?card=b1-c14-6b"
+        }
+      ],
+      "examples": [
+        {
+          "sourceCardId": "b1-c9-a1c",
+          "arabic": "هَذَا بَيْتٌ جَدِيدٌ\nأَنَا فِي بَيْتٍ جَدِيدٍ\nمَنْ فِي الْبَيْتِ الْجَدِيدِ؟",
+          "translation": "This is a new house.\nI am in a new house.\nWho is in the new house?"
+        },
+        {
+          "sourceCardId": "b1-c14-6b",
+          "arabic": "بَيْتُ الْإِمَامِ الْجَدِيدُ\nبَيْتُ الْإِمَامِ الْجَدِيدِ",
+          "translation": "The imam’s new house\nThe new imam’s house"
+        }
+      ],
+      "reviewPrompts": [
+        {
+          "prompt": "In بَيْتُ الْإِمَامِ الْجَدِيدِ, is the house or the imam new?",
+          "answer": "The imam. الْجَدِيدِ agrees with majrur الْإِمَامِ. With الْجَدِيدُ, the house is new."
+        }
+      ]
+    },
+    {
+      "id": "attached-owners",
+      "primaryTopic": "possession",
+      "difficulty": 2,
+      "title": "Attach “your,” “his,” and “her”",
+      "rule": "Attached pronouns can fill the owner’s place: كِتَابُكَ, كِتَابُهُ, كِتَابُهَا. The first noun has no الـ or tanwin.",
+      "prerequisites": [
+        "mudaf-no-al-tanwin",
+        "owner-majrur"
+      ],
+      "relatedTopics": [],
+      "treatment": "retained",
+      "note": "ـكَ addresses one male person; ـهُ is “his” and ـهَا is “her.”",
+      "sourceCards": [
+        {
+          "id": "b1-c10-1a",
+          "book": "Book 1",
+          "chapter": 10,
+          "title": "Attach “your,” “his,” and “her” to the noun",
+          "source": "Point 1 · p. 24",
+          "takeaway": "Attach the owner: كِتَابُ + ـكَ becomes كِتَابُكَ.",
+          "cardUrl": "https://farazshuja.github.io/madinah-arabic-course-web-app/?card=b1-c10-1a"
+        }
+      ],
+      "examples": [
+        {
+          "sourceCardId": "b1-c10-1a",
+          "arabic": "كِتَابُكَ   ·   كِتَابُهُ   ·   كِتَابُهَا",
+          "translation": "Your book (one male person) · his book · her book"
+        }
+      ],
+      "reviewPrompts": [
+        {
+          "prompt": "How do you say “her book”?",
+          "answer": "كِتَابُهَا."
+        }
+      ]
+    },
+    {
+      "id": "my-book",
+      "primaryTopic": "possession",
+      "difficulty": 2,
+      "title": "Use the long ī ending for “my”",
+      "rule": "كِتَابِي means “my book.” Read a long final ī rather than the u heard before some other owner endings.",
+      "prerequisites": [
+        "attached-owners"
+      ],
+      "relatedTopics": [],
+      "treatment": "retained",
+      "note": "Kept separately because this form adds a pronunciation distinction.",
+      "sourceCards": [
+        {
+          "id": "b1-c10-1b",
+          "book": "Book 1",
+          "chapter": 10,
+          "title": "A long “ī” for “my”",
+          "source": "Point 1 · First-person form · p. 24",
+          "takeaway": "كِتَابِي means “my book,” with a long final “ī.”",
+          "cardUrl": "https://farazshuja.github.io/madinah-arabic-course-web-app/?card=b1-c10-1b"
+        }
+      ],
+      "examples": [
+        {
+          "sourceCardId": "b1-c10-1b",
+          "arabic": "كِتَابِي",
+          "translation": "My book"
+        }
+      ],
+      "reviewPrompts": [
+        {
+          "prompt": "How do you say “my book”?",
+          "answer": "كِتَابِي, with a long final ī."
+        }
+      ]
+    },
+    {
+      "id": "idafah-definiteness",
+      "primaryTopic": "definiteness",
+      "difficulty": 3,
+      "title": "Check what the idafah is linked to",
+      "rule": "In these ordinary idafahs, a definite complement makes the phrase definite; an indefinite complement leaves it indefinite.",
+      "prerequisites": [
+        "proper-name-definite",
+        "mudaf-no-al-tanwin",
+        "attached-owners"
+      ],
+      "relatedTopics": [
+        "possession"
+      ],
+      "treatment": "qualification",
+      "note": "A later refinement, not a duplicate of the introductory possession cards.",
+      "sourceCards": [
+        {
+          "id": "b3a-c8-1b",
+          "book": "Book 3A",
+          "chapter": 8,
+          "title": "Idafah takes definiteness from its complement",
+          "source": "Point 1 category 6 · p. 39",
+          "takeaway": "Check the complement, not just the mudaf’s missing tanwin.",
+          "cardUrl": "https://farazshuja.github.io/madinah-arabic-course-web-app/?card=b3a-c8-1b"
+        }
+      ],
+      "examples": [
+        {
+          "sourceCardId": "b3a-c8-1b",
+          "arabic": "كِتَابُ هَذَا · كِتَابُ الْمُدَرِّسِ · كِتَابُهُ · كِتَابُ حَامِدٍ\nكِتَابُ طَالِبٍ · بَيْتُ مُدَرِّسٍ",
+          "translation": "This person’s book · the teacher’s book · his book · Hamid’s book\nA student’s book · a teacher’s house"
+        }
+      ],
+      "reviewPrompts": [
+        {
+          "prompt": "Compare كِتَابُ الْمُدَرِّسِ and كِتَابُ طَالِبٍ. Which is definite?",
+          "answer": "كِتَابُ الْمُدَرِّسِ is definite (“the teacher’s book”). كِتَابُ طَالِبٍ is indefinite (“a student’s book”). Both first nouns lack tanwin."
+        }
+      ]
+    },
+    {
+      "id": "describe-possessed-noun",
+      "primaryTopic": "possession",
+      "difficulty": 3,
+      "title": "Finish the idafah before describing the first noun",
+      "rule": "An adjective describing the first noun follows the complete idafah. In the definite examples here, that adjective is definite.",
+      "prerequisites": [
+        "idafah-definiteness",
+        "adjective-case"
+      ],
+      "relatedTopics": [
+        "description",
+        "definiteness"
+      ],
+      "treatment": "retained",
+      "note": "Use adjective-case to distinguish description of the thing from description of its owner.",
+      "sourceCards": [
+        {
+          "id": "b1-c14-6a",
+          "book": "Book 1",
+          "chapter": 14,
+          "title": "Describe a possessed thing after the whole phrase",
+          "source": "Point 6 · p. 38",
+          "takeaway": "Complete the possession phrase first, then add the first noun’s adjective.",
+          "cardUrl": "https://farazshuja.github.io/madinah-arabic-course-web-app/?card=b1-c14-6a"
+        }
+      ],
+      "examples": [
+        {
+          "sourceCardId": "b1-c14-6a",
+          "arabic": "بَيْتُ الْإِمَامِ الْجَدِيدُ\nبَيْتُهُ الْجَدِيدُ",
+          "translation": "The imam’s new house\nHis new house"
+        }
+      ],
+      "reviewPrompts": [
+        {
+          "prompt": "Say “his new house.”",
+          "answer": "بَيْتُهُ الْجَدِيدُ."
+        }
+      ]
+    },
+    {
+      "id": "definite-categories",
+      "primaryTopic": "definiteness",
+      "difficulty": 3,
+      "title": "Recognize several ways of being definite",
+      "rule": "Personal pronouns, proper names, demonstratives, relative pronouns, and nouns with الـ are definite categories in this source.",
+      "prerequisites": [
+        "proper-name-definite",
+        "idafah-definiteness"
+      ],
+      "relatedTopics": [],
+      "treatment": "retained",
+      "note": "An overview of the categories listed on this card, not an exhaustive account of every construction. Relative pronouns can be explored through the source card.",
+      "sourceCards": [
+        {
+          "id": "b3a-c8-1a",
+          "book": "Book 3A",
+          "chapter": 8,
+          "title": "Definite nouns identify something specific",
+          "source": "Point 1 categories 1–5 · p. 39",
+          "takeaway": "Definiteness is not the same as having الْـ or lacking tanwin.",
+          "cardUrl": "https://farazshuja.github.io/madinah-arabic-course-web-app/?card=b3a-c8-1a"
+        }
+      ],
+      "examples": [
+        {
+          "sourceCardId": "b3a-c8-1a",
+          "arabic": "أَنَا · أَنْتَ · هُوَ\nأَحْمَدُ · بِلَالٌ · مَكَّةُ\nهَذَا · ذَلِكَ · أُولَئِكَ\nالَّذِي · الَّذِينَ · الَّتِي\nالْكِتَابُ · الرَّجُلُ",
+          "translation": "I · you · he\nAhmad · Bilal · Makkah\nThis · that · those\nRelative pronouns: who/which\nThe book · the man"
+        }
+      ],
+      "reviewPrompts": [
+        {
+          "prompt": "Must every definite word begin with الـ? Give a counterexample.",
+          "answer": "No. For example, حَامِدٌ is a definite proper name; أَنَا is a definite personal pronoun."
+        }
+      ]
+    },
+    {
+      "id": "idafah-after-preposition",
+      "primaryTopic": "possession",
+      "difficulty": 3,
+      "title": "Track each noun’s reason for its ending",
+      "rule": "In عَلَى مَكْتَبِ الْمُدَرِّسِ, the first noun is majrur after عَلَى; the second is majrur as the idafah complement.",
+      "prerequisites": [
+        "mudaf-no-al-tanwin",
+        "owner-majrur"
+      ],
+      "relatedTopics": [],
+      "treatment": "retained",
+      "note": "Assumes recognition of عَلَى as a preposition.",
+      "sourceCards": [
+        {
+          "id": "b1-c5-1d",
+          "book": "Book 1",
+          "chapter": 5,
+          "title": "Two reasons for two “i” endings",
+          "source": "Point 1 · Note d · p. 12",
+          "takeaway": "The first noun follows the preposition; the second follows the possession rule.",
+          "cardUrl": "https://farazshuja.github.io/madinah-arabic-course-web-app/?card=b1-c5-1d"
+        }
+      ],
+      "examples": [
+        {
+          "sourceCardId": "b1-c5-1d",
+          "arabic": "عَلَى مَكْتَبِ الْمُدَرِّسِ",
+          "translation": "On the teacher’s table"
+        }
+      ],
+      "reviewPrompts": [
+        {
+          "prompt": "Why do both nouns have kasrah in عَلَى مَكْتَبِ الْمُدَرِّسِ?",
+          "answer": "مَكْتَبِ follows عَلَى; الْمُدَرِّسِ is the mudaf ilayhi. The first noun’s own case can change."
+        }
+      ]
+    },
+    {
+      "id": "nonhuman-plural-agreement",
+      "primaryTopic": "description",
+      "difficulty": 3,
+      "title": "Extend agreement to non-human plurals",
+      "rule": "In the basic rule taught here, non-human plurals take feminine singular agreement: كُتُبٌ جَدِيدَةٌ.",
+      "prerequisites": [
+        "adjective-gender",
+        "adjective-definiteness"
+      ],
+      "relatedTopics": [],
+      "treatment": "combined-sequence",
+      "note": "Two complementary steps—recognize the class, then apply its agreement. Assumes basic singular/plural recognition; exceptions remain outside this pilot.",
+      "sourceCards": [
+        {
+          "id": "b1-c16-1a",
+          "book": "Book 1",
+          "chapter": 16,
+          "title": "People and non-human plurals behave differently",
+          "source": "Point 1 · p. 42",
+          "takeaway": "Identify whether the plural refers to people or to non-human things.",
+          "cardUrl": "https://farazshuja.github.io/madinah-arabic-course-web-app/?card=b1-c16-1a"
+        },
+        {
+          "id": "b1-c16-1b",
+          "book": "Book 1",
+          "chapter": 16,
+          "title": "Treat non-human plurals as feminine singular",
+          "source": "Point 1 · p. 42",
+          "takeaway": "Non-human plural meaning can take feminine singular Arabic agreement.",
+          "cardUrl": "https://farazshuja.github.io/madinah-arabic-course-web-app/?card=b1-c16-1b"
+        }
+      ],
+      "examples": [
+        {
+          "sourceCardId": "b1-c16-1a",
+          "arabic": "هَؤُلَاءِ طُلَّابٌ جُدُدٌ، هُمْ صِغَارٌ",
+          "translation": "These are new students; they are small."
+        },
+        {
+          "sourceCardId": "b1-c16-1b",
+          "arabic": "هَذَا كِتَابٌ جَدِيدٌ، هُوَ صَغِيرٌ\nهَذِهِ كُتُبٌ جَدِيدَةٌ، هِيَ صَغِيرَةٌ",
+          "translation": "This is a new book; it is small.\nThese are new books; they are small."
+        }
+      ],
+      "reviewPrompts": [
+        {
+          "prompt": "Choose: كُتُبٌ جَدِيدٌ, كُتُبٌ جَدِيدَةٌ, or كُتُبٌ جُدُدٌ for the basic rule here.",
+          "answer": "كُتُبٌ جَدِيدَةٌ. كُتُبٌ is a non-human plural; its adjective is feminine singular."
+        }
+      ]
+    }
+  ]
+}

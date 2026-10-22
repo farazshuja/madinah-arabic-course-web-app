@@ -12,3 +12,12 @@
 - Prepare and validate all local batches before one final commit and push to GitHub main. GitHub Pages deploys from the branch root. Never include credentials or source PDFs in the repository. Runtime approvals still apply.
 - Browser QA passed locally for Book 3B selection, chapter navigation, next/progress, bookmark and reload; Arabic layout inspected. No subagents requested; do not spawn any.
 
+## Grouped concept library
+
+- `concept-paths/` covers every original card: 743 source cards, 733 concepts, 11 topics, 69 branches. The original reader links to it; `pilot/` preserves the approved 19-concept sample and links to the full library.
+- `concept-paths/concepts.json` stores grouped rules, topic/branch, editorial levels, prerequisites, related topics, review prompts, exact source takeaways, original examples/explanations, URLs and source-ID aliases. `coverage.json` records counts and nine reviewed combinations. `key-takeaways.json` remains the flat original export.
+- Generate in order: `node continuation/build-concept-pilot.cjs`, `node continuation/export-takeaways.cjs`, `node continuation/build-concept-library.cjs`. Validate with `node continuation/check-concept-library.cjs` and the existing `node continuation/index.cjs check`.
+- `concept-taxonomy.cjs` has priority rules and reviewed overrides for incidental tags. `build-concept-library.cjs` has reviewed combinations and explicit supporting prerequisites. The builder checks total source coverage and dependency order. Do not blindly merge similar English meanings or remove later conditions.
+- Concept paths provides a collapsible topic tree, paged learning path, normalized Arabic/English search, topic/level filters, and recall/mixed review. Recall hides titles, translations and explanations until reveal; it stores no mastery scores or review schedule. Levels are editorial estimates, not measured difficulty.
+- Reader links use `?card=ID` to override the remembered position. Existing IDs, book navigation and `madinah.progress.v1` storage remain compatible. Concept-path source links use the current host; published source URLs are retained separately.
+

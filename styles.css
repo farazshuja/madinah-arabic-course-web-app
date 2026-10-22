@@ -6,3 +6,5 @@
 @media(min-width:721px){#chapters{max-height:54vh;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#c8d3bf transparent;padding-right:5px}.chapter{padding-top:13px;padding-bottom:13px}.progress-box{margin-top:22px}.local-note{margin-top:18px}}
 
 .book-picker{margin:0 0 18px}.book-picker label{display:block;font-size:8px;letter-spacing:1.5px;color:var(--muted);margin-bottom:9px}.book-picker select{width:100%;border:1px solid #d6ddce;border-radius:7px;background:#fffef9;color:var(--ink);padding:11px;font:inherit;font-size:12px}.book-label{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}.book-label span{float:none;font-size:9px}#availability{color:var(--green)}@media(max-width:720px){.book-picker{display:flex;align-items:center;gap:12px;margin-bottom:15px}.book-picker label{flex-shrink:0;margin:0}.book-picker select{max-width:260px}.book-label{display:flex;margin-bottom:15px;padding-bottom:10px}}
+
+.concept-paths-link{color:var(--green);text-underline-offset:3px}
