@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sounds, writing &amp; word classes – motion</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;family=Figtree:wght@400;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="../../site-nav.css"><script src="../../site-nav.js" defer></script></head><body><main>
+<div class="group-picker"><label for="group">Learning group</label><select id="group" disabled><option>Loading…</option></select></div><h1 id="group-title">Arabic concepts in motion</h1>
+<p class="sub" id="group-summary" role="status">Loading visual lessons…</p>
+<nav id="dots" aria-label="Choose a concept"></nav>
+<section id="card" aria-label="Animated concept">
+<h2 id="ttl"></h2><p id="rule"></p>
+<div id="example-picker" hidden><label for="example">Example</label> <select id="example"></select></div><div id="stage"></div>
+<div id="ctl"><button class="b" id="prev">Back</button><button class="b pri" id="rep">Replay</button><button class="b" id="next">Next</button>
+<label style="font-size:.85rem;color:var(--mut)"><input type="checkbox" id="auto"> Auto-advance</label><span id="meta"></span></div>
+<details id="context" hidden><summary>Why this works</summary><p id="explanation"></p><a id="concept-link">Read the concept &amp; original sources ↗</a></details></section><nav class="group-controls" aria-label="Move between groups"><button class="b" id="prev-group" disabled>← Previous group</button><button class="b" id="next-group" disabled>Next group →</button></nav></main>
+<script src="motion.js"></script></body></html>

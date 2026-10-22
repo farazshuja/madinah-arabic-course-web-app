@@ -4,9 +4,9 @@ const vm = require('node:vm');
 const assert = require('node:assert/strict');
 
 const root = path.resolve(__dirname, '..');
-const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+const html = fs.readFileSync(path.join(root, 'reader.html'), 'utf8');
 const modules = [...html.matchAll(/<script src="([^"]+)"/g)]
-  .map(match => match[1]).filter(name => name !== 'app.js');
+  .map(match => match[1]).filter(name => name !== 'app.js' && name !== 'site-nav.js');
 const context = vm.createContext({});
 vm.runInContext(modules.map(name => fs.readFileSync(path.join(root, name), 'utf8'))
   .join('\n') + '\nthis.cards = concepts;', context);

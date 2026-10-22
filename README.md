@@ -2,7 +2,9 @@
 
 [Open the website](https://farazshuja.github.io/madinah-arabic-course-web-app/)
 
-Learn the Key concepts one card at a time, with simple English explanations, Arabic examples, chapter navigation, bookmarks and topic tags across books.
+Revise 733 grouped concepts from 89 chapter sections through motion graphics on the home page. All 11 topic groups use compact animated Arabic examples, highlighted changes, Replay and optional auto-advance.
+
+The main tabs open Motion graphics, [Read the book](reader.html), [Topic tree](concept-paths/?view=tree), [Learning Path](concept-paths/?view=path), and [Recall practice](concept-paths/?view=review). The reader retains chapter navigation, bookmarks and saved progress. Older `?card=...` links on the home page forward to the same card in the reader. Book 1's additional 4a section is included in the 89-section total.
 
 Includes all 743 concepts: Book 1 (143), Book 2 (264), Book 3A (124), and Book 3B (212). Reading progress and bookmarks are stored in your browser.
 
@@ -28,6 +30,8 @@ See the coverage reports and `continuation/HANDOFF.md` for content maintenance. 
 Open [Concept paths](concept-paths/) to explore all 743 cards as 733 concepts in 11 topics and 69 branches. Browse the topic tree, follow an easier-to-harder learning path, search/filter, or practise recall with hidden answers. Original examples, explanations, exact takeaways and direct card links remain attached.
 
 The [grouped JSON](concept-paths/concepts.json) includes topics, prerequisites, levels, review prompts, source mappings and aliases for consolidated cards. [Coverage and grouping decisions](concept-paths/coverage.json) records all combinations and totals. Levels are editorial estimates based on topic complexity, original course position and supporting prerequisites.
+
+[Visual lessons](concept-paths/motion/) animate all 733 concepts in the same compact card format across all 11 groups. Choose a group, replay an idea, browse its examples, or enable auto-advance. Source explanations and Topic Tree links remain available. Rebuild with `node continuation/build-motion-library.cjs` and validate with `node continuation/check-motion-library.cjs` after grouped-content changes.
 
 Regenerate and validate:
 

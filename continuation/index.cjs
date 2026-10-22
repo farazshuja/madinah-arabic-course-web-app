@@ -1,8 +1,8 @@
 // Execute the content locally; return only compact metadata, never card bodies.
 const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert');
 const root=path.resolve(__dirname,'..'),dist=root;
-const html=fs.readFileSync(path.join(dist,'index.html'),'utf8');
-const modules=[...html.matchAll(/<script src="([^"]+)"/g)].map(m=>m[1]).filter(n=>n!=='app.js');
+const html=fs.readFileSync(path.join(dist,'reader.html'),'utf8');
+const modules=[...html.matchAll(/<script src="([^"]+)"/g)].map(m=>m[1]).filter(n=>n!=='app.js'&&n!=='site-nav.js');
 const source=modules.map(n=>fs.readFileSync(path.join(dist,n),'utf8')).join('\n');
 const ctx={};vm.createContext(ctx);vm.runInContext(source+'\nresult=concepts',ctx);const cards=ctx.result;
 const bookOf=c=>c.book||1;

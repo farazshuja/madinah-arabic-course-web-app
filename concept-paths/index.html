@@ -4,13 +4,14 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Explore every Madinah Arabic Course takeaway by grammar topic, follow a learning path, and practise recalling the rules.">
   <title>Madinah — Concept paths</title>
-  <link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="../site-nav.css"><script src="../site-nav.js" defer></script><script src="app.js?v=motion-home" defer></script>
 </head>
 <body>
-  <header><a class="brand" href="../index.html">Madinah <span>ARABIC, ONE IDEA AT A TIME</span></a><a class="reader-link" href="../index.html">Read by book ↗</a></header>
+  <header><a class="brand" href="../index.html">Madinah <span>ARABIC, ONE IDEA AT A TIME</span></a><a class="reader-link" href="../reader.html">Read by book ↗</a></header>
   <main>
     <section class="intro"><p class="eyebrow">CONNECTED KNOWLEDGE</p><h1>See how the ideas fit.</h1><p>Explore a grammar family. Follow its ideas from a first pattern to a deeper understanding. Then try recalling the rule.</p><p id="summary" class="muted" role="status">Loading concept paths…</p></section>
     <nav class="views" aria-label="Learning view"><button data-view="tree" aria-pressed="true">Topic tree</button><button data-view="path" aria-pressed="false">Learning path</button><button data-view="review" aria-pressed="false">Recall practice</button><a href="concepts.json" download>Download grouped JSON ↗</a></nav>
+    <p><a class="action" href="../" style="display:inline-block;text-decoration:none">▶ Learn visually</a> <span class="muted">All 11 groups · 733 animated concepts</span></p>
     <section class="filters" aria-label="Find concepts">
       <label class="search-label">Find an idea<input id="search" type="search" placeholder="Search a rule, Arabic example, or topic…"></label>
       <label>Topic<select id="topic"><option value="">All topics</option></select></label>

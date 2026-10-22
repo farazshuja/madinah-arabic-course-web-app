@@ -4,6 +4,19 @@ All 743 original cards are represented by 733 grouped concepts, across 11 topics
 
 ## Reading and reviewing
 
+The [visual lessons](motion/) cover all 733 concepts across the 11 topic groups, following the supplied motion HTML reference: one compact card, cream and sage colors, highlighted Arabic, animated transformations and short example translations. Back, Next, Replay, grouped navigation dots and optional auto-advance control the lesson. Select a group or use the previous/next group buttons. Direct concept hashes select the right group, and every Topic Tree concept links to its animation.
+
+Group 1 retains the curated reference scenes in `motion/foundations.json`. The other groups use exact source rules and examples: only explicit source arrows become transformations, with changed graphemes highlighted; other examples assemble word by word, highlighting Arabic found in the rule or title. Examples with matching Arabic/translation lines appear one at a time. Unmatched line counts remain together to avoid inventing a translation mapping. Long transformation lists are divided into compact sets. The Example selector exposes every set; auto-advance cycles through them before moving to the next concept and stops at the group's end. Full explanations remain under “Why this works.” There is no recorded audio or saved completion score. Reduced motion skips animation delays; leaving the tab cancels playback.
+
+After regenerating the grouped library, rebuild and check visual lessons:
+
+```sh
+node continuation/build-motion-library.cjs
+node continuation/check-motion-library.cjs
+```
+
+The check verifies all concept IDs, grouping, learning order, source rules, examples, translations, explanations, transformation rows and links. `motion/lessons.json` is generated; edit the canonical concepts or the curated foundation scenes instead.
+
 - Topic tree: one primary topic and branch for each concept; related topics connect families.
 - Learning path: four levels, ordered by explicit supporting prerequisites, then original course position. Navigation is paged to keep the full library manageable. Topic and level filters also apply to the path.
 - Recall practice: titles, explanations, translations and supporting links are hidden until the answer is revealed. Most prompts show the original Arabic example and ask the learner to explain the relevant rule. The pilot concepts retain their specific application questions. “Mix this review” shuffles the current filtered selection.
